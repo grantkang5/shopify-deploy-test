@@ -34,7 +34,11 @@
 @import './sections/collection-list';
 @import './sections/featured-collection';
 @import './sections/image-with-text';
+@import './sections/main-header.scss';
 
 // Templates
 @import './templates/gift_card';
 @import './templates/product';
+
+// Fonts
+@import './fonts.scss';

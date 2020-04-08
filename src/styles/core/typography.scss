@@ -3,9 +3,8 @@ html {
 }
 
 body {
-  font-family: $font-body;
-  font-weight: $font-body-weight;
-  font-style: $font-body-style;
+  font-family: futura-pt;
+  letter-spacing: 0.5px;
   font-size: 1.6rem;
 }
 
@@ -15,7 +14,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-heading;
+  font-family: futura-pt;
+  letter-spacing: 0.5px;
 }
 
 body,
