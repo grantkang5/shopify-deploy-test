@@ -6,6 +6,7 @@ body {
   font-family: futura-pt;
   letter-spacing: 0.5px;
   font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -16,6 +17,8 @@ h5,
 h6 {
   font-family: futura-pt;
   letter-spacing: 0.5px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
 }
 
 body,
@@ -27,6 +30,14 @@ select {
   text-size-adjust: 100%;
 }
 
-a:focus {
+a {
   color: inherit;
+  text-decoration: none;
+  color: $color-body-text;
+  text-transform: uppercase;
+  transition: color 200ms ease;
+
+  &:hover {
+    color: $color-blue;
+  }
 }

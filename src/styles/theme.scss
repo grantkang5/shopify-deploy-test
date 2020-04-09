@@ -28,6 +28,7 @@
 @import './components/placeholders';
 @import './components/responsive-images';
 @import './components/address-forms';
+@import './components/logo';
 
 // Sections
 @import './sections/blog-posts';
@@ -35,6 +36,8 @@
 @import './sections/featured-collection';
 @import './sections/image-with-text';
 @import './sections/main-header.scss';
+@import './sections/home-banner.scss';
+@import './sections/featured-services.scss';
 
 // Templates
 @import './templates/gift_card';

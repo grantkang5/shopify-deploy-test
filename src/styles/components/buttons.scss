@@ -1,11 +1,23 @@
 .button {
-  display: inline-block;
-  vertical-align: middle;
-  width: auto;
-  border: 0;
+  display: block;
+  background-color: #F84B4B;
+  height: 50px;
   text-align: center;
-  white-space: nowrap;
-  text-decoration: none;
-  user-select: none;
-  appearance: none;
+
+  outline: none;
+  border: none;
+  padding: 16px 20px;
+  width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    transition: background-color 400ms ease-out;
+    background-color: darken($color: #F84B4B, $amount: 10%)
+  }
+}
+
+.main-button-text {
+  color: #FFF;
+  font-style: bold;
+  font-size: 14px;
 }
