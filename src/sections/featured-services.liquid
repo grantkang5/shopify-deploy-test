@@ -1,0 +1,46 @@
+<section class='home-services'>
+  <h1>FEATURED SERVICES</h1>
+  <div class='text-line'></div>
+
+  <div class='content'>
+
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Featured Services",
+    "max_blocks": 4,
+    "blocks": [
+      {
+        "type": "select",
+        "name": "Featured Service",
+        "settings": [
+          {
+            "id": "service",
+            "type": "text",
+            "label": "Service name",
+            "default": "Service"
+          },
+          {
+            "id": "service-desc",
+            "type": "text",
+            "label": "Service Description",
+            "default": "Lorem ipsum"
+          },
+          {
+            "id": "service-image",
+            "type": "image_picker",
+            "label": "Service Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Services",
+        "category": "Banner"
+      }
+    ]
+  }
+{% endschema %}
