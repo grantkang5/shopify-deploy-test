@@ -1,0 +1,13 @@
+.main-logo {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  .section-1 {
+    margin-right: 3px;
+  }
+  .section-2 {
+    color: $color-red;
+  }
+}

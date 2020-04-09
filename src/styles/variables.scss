@@ -1,5 +1,7 @@
 // Text colors
 $color-body-text: var(--color-body-text);
+$color-red: #F84B4B;
+$color-blue: #3498DB;
 
 // Background colors
 $color-body: var(--color-main-background);
@@ -19,6 +21,9 @@ $color-error: #ff6d6d;
 $color-error-bg: #ffffff;
 $color-success: #000000;
 $color-success-bg: #000000;
+
+// Shadows
+$box-shadow: 0 2px 4px 0 rgba(76,76,75,0.1);
 
 // Typography
 $font-heading: var(--font-heading);
