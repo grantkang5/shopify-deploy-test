@@ -1,0 +1,80 @@
+{%- comment -%}
+  This is the top banner that shows on the home '/' index page.
+
+  Banner Settings
+  - Heading: title of the banner section
+  - Subheading: description of the banner section
+  - Image: background image used in the banner
+{%- endcomment -%}
+<section class='home-banner' style=" background-image: url({{ section.settings.home-banner-image | img_url: '1920x768'  }})">
+  <div class='section'>
+    <div class='content'>
+      <div class='hero'>
+        {% if section.settings.home-banner-header != blank %}
+          <h1> {{ section.settings.home-banner-header }} </h1>
+        {% endif %}
+        {% if section.settings.home-banner-subheader != blank %}
+          <p class='home-banner-subheader'> {{ section.settings.home-banner-subheader }} </p>
+        {% endif %}
+
+        {% for block in section.blocks %}
+          {% assign button-text='CHECK OUR SERVICES' %}
+          {% assign button-link='{{ block.settings.button-link }}' %}
+          {% include 'button' %}
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+  {
+   "name": "Home Banner",
+   "max_blocks": 1,
+   "settings": [
+      {
+         "id":"home-banner-header",
+         "type":"text",
+         "label":"Banner Header",
+         "default":"When you look good we feel great"
+      },
+      {
+         "id":"home-banner-subheader",
+         "type":"text",
+         "label":"Banner Subheader",
+         "default":"Welcome to Misarang Skin Care, when you make the choice to be cared for by us, you’re entering into a partnership in which we are dependent upon each other. Our goals are the same as yours because our success is based solely on your success. To that end, we feel that our results will speak for themselves and are confident that, given the opportunity, Misarang will prove how devoted we are to achieving your goals."
+      },
+      {
+         "id":"home-banner-image",
+         "type":"image_picker",
+         "label":"Banner Background Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "select",
+        "name": "CTA Button",
+        "settings": [
+          {
+            "id": "button-text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "CHECK OUR SERVICES"
+          },
+          {
+            "id": "button-link",
+            "type": "page",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home Banner",
+        "category": "Banner"
+      }
+    ]
+  }
+{% endschema %}
